@@ -30,18 +30,30 @@ header {
     input {
       width: 70%;
       padding: 1rem;
+      font-size: 1.25rem;
       border: 1px solid $dark-purple;
       background-color: $greyish-purple;
+      &:focus {
+        outline-color: $accent;
+        border-color: $accent;
+      }
+      &::placeholder {
+        color: $grey;
+      }
     }
     button {
       width: 20%;
       padding: 1rem 0.5rem;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      background-color: $dark-purple;
+      background-color: $accent;
       color: $white;
       border: 1px solid $dark-purple;
+      &:hover {
+        background-color: $dark-purple;
+        transition: $transition;
+      }
     }
   }
 }
