@@ -8,6 +8,30 @@
   </head>
   <body>
     <input type="text" name="" id="bvn-input" />
-    <button type="submit">Verify</button>
+    <button type="submit" onclick="bvnValidate()">Verify</button>
+
+    <script>
+      function bvnValidate() {
+        const bvnNumber = document.getElementById("bvn-input").value;
+        const secretKey = "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X";
+        const endpoint = `https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/${bvnNumber}?seckey=${secretKey}`;
+
+        fetch(endpoint, { headers: { "Content-Type": "Application/json" } })
+          .then(res => {
+            return res.json();
+          })
+          .then(jsonRes => {
+            // console.log(jsonRes);
+            if (jsonRes["status"] === "success") {
+              alert("The BVN number matches");
+            } else {
+              alert("The BVN number does not match");
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>
