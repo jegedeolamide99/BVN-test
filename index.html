@@ -10,14 +10,17 @@
   <body>
     <header role="banner">
       <div class="bvn">
-        <h1>Verify Customers</h1>
-        <p>
-          Validate customers during onboarding with their BVN information using
-          <strong>Rave's BVN API</strong>.
-        </p>
-        <label for="bvn-input">Enter BVN number</label>
-        <input type="text" name="" id="bvn-input" />
-        <button type="submit" onclick="bvnValidate()">Verify</button>
+        <div class="bvn_grid">
+          <h1>Verify Customers</h1>
+          <p class="bvn_grid-text">
+            Validate customers during onboarding with their BVN information
+            using
+            <strong>Rave's BVN API</strong>.
+          </p>
+          <label for="bvn-input">Enter BVN number</label>
+          <input type="text" name="" id="bvn-input" placeholder="11111111111" />
+          <button type="submit" onclick="bvnValidate()">Verify</button>
+        </div>
       </div>
     </header>
 
