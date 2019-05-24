@@ -25,11 +25,13 @@ header {
     label {
       display: block;
       font-size: 1rem;
+      margin-bottom: 0.5rem;
     }
     input {
-      padding: 1rem;
-      border: 1px solid;
       width: 70%;
+      padding: 1rem;
+      border: 1px solid $dark-purple;
+      background-color: $greyish-purple;
     }
     button {
       width: 20%;
@@ -37,6 +39,9 @@ header {
       text-align: center;
       font-size: 1rem;
       font-weight: 700;
+      background-color: $dark-purple;
+      color: $white;
+      border: 1px solid $dark-purple;
     }
   }
 }
