@@ -7,8 +7,14 @@
     <title>Validate BVN</title>
   </head>
   <body>
-    <input type="text" name="" id="bvn-input" />
-    <button type="submit" onclick="bvnValidate()">Verify</button>
+    <header role="banner">
+      <div class="bvn">
+        <h1>Verify BVN information</h1>
+        <label for="bvn-input">Enter customer's BVN</label>
+        <input type="text" name="" id="bvn-input" />
+        <button type="submit" onclick="bvnValidate()">Verify</button>
+      </div>
+    </header>
 
     <script>
       function bvnValidate() {
