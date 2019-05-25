@@ -1,0 +1,46 @@
+@media screen and (max-width: 900px) {
+  header {
+    min-height: 100vh;
+    height: auto;
+    .bvn {
+      grid-template-columns: 1fr;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      .bvn_grid {
+        h1 {
+          font-size: 2rem;
+        }
+        .bvn_grid-text {
+          font-size: 1rem;
+        }
+        label {
+          font-size: 0.875rem;
+        }
+        input {
+          width: 70%;
+          padding: 0.875rem 0.5rem;
+          font-size: 1rem;
+        }
+        button {
+          width: 27%;
+          padding: 0.875rem 0.5rem;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  header {
+    .bvn {
+      max-width: 990px;
+      .bvn_grid {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
