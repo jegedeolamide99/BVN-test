@@ -19,7 +19,9 @@
           </p>
           <label for="bvn-input">Enter BVN number</label>
           <input type="text" name="" id="bvn-input" placeholder="11111111111" />
-          <button type="submit" onclick="bvnValidate()">Verify</button>
+          <button type="submit" onclick="bvnValidate()" id="submit">
+            Verify
+          </button>
         </div>
         <div class="bvn_image">
           <img
@@ -31,6 +33,11 @@
     </header>
 
     <script>
+      const submit = document.getElementById("submit");
+      submit.addEventListener("click", function() {
+        submit.innerText = "Verifying...";
+      });
+
       function bvnValidate() {
         const bvnNumber = document.getElementById("bvn-input").value;
         const secretKey = "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X";
