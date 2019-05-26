@@ -43,17 +43,24 @@
         const secretKey = "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X";
         const endpoint = `https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/${bvnNumber}?seckey=${secretKey}`;
 
-        fetch(endpoint, { headers: { "Content-Type": "Application/json" } })
+        fetch(endpoint, { headers: {}, mode: "cors" })
           .then(res => {
             return res.json();
           })
           .then(jsonRes => {
             // console.log(jsonRes);
             if (jsonRes["status"] === "success") {
-              alert("The BVN number matches");
+              alert(
+                "The BVN number exists and it belongs to " +
+                  jsonRes.data.first_name +
+                  " " +
+                  jsonRes.data.last_name
+              );
+              submit.innerText = "Verify";
             } else {
-              alert("The BVN number does not match");
+              alert("The BVN number does not exist. Please try again");
             }
+            submit.innerText = "Verify";
           })
           .catch(err => {
             console.log(err);
